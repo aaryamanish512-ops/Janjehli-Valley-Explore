@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore Shikari Mata Temple, Janjehli and the beautiful Seraj Valley of Himachal Pradesh.">
+<title>Seraj Valley Explorer - 
+| Discover the Himalayas</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root {
+  --green: #10251d;
+  --green2: #1b392b;
+  --cream: #f5f2e9;
+  --gold: #d1b078;
+  --white: #ffffff;
+  --muted: #c6d1c5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 75px; }
+
+body {
+  font-family: 'DM Sans', Arial, sans-serif;
+  background: var(--cream);
+  color: #202d24;
+  line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #10251df5;
+  color: white;
+  min-height: 76px;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font: 600 20px 'Playfair Display', Georgia, serif;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+.logo small {
+  display: block;
+  font: 10px 'DM Sans', Arial, sans-serif;
+  letter-spacing: 3px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+nav a, nav button {
+  color: white;
+  font-size: 12px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+nav a:hover { color: var(--gold); }
+
+#language {
+  padding: 8px 12px;
+  border: 1px solid var(--gold);
+  border-radius: 25px;
+}
+
+.menu {
+  display: none;
+  color: white;
+  background: none;
+  border: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 650px;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg, #081b12d9, #081b125c, #081b1210),
+    url('file:///C:/Users/user/Desktop/Seraj%20velly%20Exploration/image/Untitled-1%20copy.jpg')
+    center/cover;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 760px;
+  padding: 45px 8%;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: clamp(43px, 6vw, 76px);
+  line-height: 1.12;
+  margin-bottom: 22px;
+}
+
+.hero h1 em, h2 em { color: var(--gold); }
+
+.hero p:not(.eyebrow) {
+  max-width: 490px;
+  color: #e5e9e1;
+  font-size: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 27px;
+  padding: 13px 22px;
+  background: var(--gold);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn:hover { background: white; }
+
+section { scroll-margin-top: 76px; }
+
+.section {
+  padding: 85px 9%;
+}
+
+.kicker {
+  color: #9b804e;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(34px, 4.5vw, 53px);
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.intro-grid p {
+  font-size: 14px;
+  color: #59665b;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 45px;
+  border-top: 1px solid #d1d7cb;
+  padding-top: 25px;
+  gap: 20px;
+}
+
+.stat strong {
+  display: block;
+  font: 25px 'Playfair Display', Georgia, serif;
+  color: var(--green);
+}
+
+.stat span { font-size: 11px; color: #667367; }
+
+.temple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--green);
+  color: white;
+}
+
+.temple-photo {
+  min-height: 600px;
+  background:
+    url('file:///C:/Users/user/Desktop/Seraj%20velly%20Exploration/image/BRight%20Frame%20sm.jpg')
+    center/cover;
+}
+
+.temple-content { padding: 75px 9%; }
+
+.temple-content p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 17px;
+}
+
+.temple-content h3 {
+  color: var(--gold);
+  font-size: 23px;
+  margin: 28px 0 12px;
+}
+
+.source {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 12px;
+  text-decoration: underline;
+  margin-top: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.card {
+  background: #e9eae1;
+  overflow: hidden;
+  transition: transform .25s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content { padding: 25px; }
+
+.card h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #5e6a60;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.card a {
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.quote {
+  background: #dfe6d9;
+  text-align: center;
+  padding: 75px 12%;
+}
+
+.quote blockquote {
+  font: italic clamp(23px, 3vw, 34px)/1.5 'Playfair Display', Georgia, serif;
+  max-width: 850px;
+  margin: auto;
+}
+
+.travel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.travel-item {
+  border-top: 1px solid #cbd2c6;
+  padding-top: 20px;
+}
+
+.travel-item h3 { font-size: 23px; margin-bottom: 10px; }
+
+.travel-item p {
+  color: #5e6a60;
+  font-size: 13px;
+}
+
+.warning {
+  background: #e4e8dd;
+  padding: 25px;
+  margin-top: 35px;
+  font-size: 12px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: 210px 210px;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #d1d9cf;
+}
+
+.gallery-item:first-child {
+  grid-row: span 2;
+}
+
+.gallery-item:last-child {
+  grid-column: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s;
+}
+
+.gallery-item:hover img { transform: scale(1.05); }
+
+.cta {
+  background: var(--green2);
+  color: white;
+  padding: 65px 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cta h2 { margin-bottom: 0; }
+
+footer {
+  background: #091810;
+  color: #d0dbd0;
+  padding: 40px 8%;
+  font-size: 11px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+footer a { color: var(--gold); }
+
+#viewer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: #000e;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+#viewer img {
+  max-width: 95%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+#viewer button {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 35px;
+  color: white;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.note {
+  color: #737e73;
+  font-size: 10px;
+  margin-top: 18px;
+}
+
+@media(max-width: 850px) {
+  header { padding: 15px 5%; }
+  .menu { display: block; }
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--green);
+    padding: 20px 7%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  nav.open { display: flex; }
+  .intro-grid, .temple { grid-template-columns: 1fr; }
+  .temple-photo { min-height: 380px; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .section { padding: 65px 7%; }
+}
+
+@media(max-width: 560px) {
+  .hero { min-height: 580px; height: 78vh; }
+  .hero-content { padding: 35px 7%; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { padding: 10px 0; }
+  .cards, .travel-grid { grid-template-columns: 1fr; }
+  .card img { height: 230px; }
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px 150px 150px;
+  }
+  .gallery-item:first-child { grid-row: auto; grid-column: span 2; }
+  .gallery-item:last-child { grid-column: span 2; }
+  .cta { display: block; padding: 55px 7%; }
+  .cta .btn { margin-top: 25px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#home" class="logo">SERAJ<small>VALLEY EXPLORER</small></a>
+  <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+  <nav id="nav">
+    <a href="#home" data-en="Home" data-hi="होम">Home</a>
+    <a href="#temple" data-en="Temple History" data-hi="मंदिर का इतिहास">Temple History</a>
+    <a href="#explore" data-en="Explore" data-hi="घूमें">Explore</a>
+    <a href="#travel" data-en="Travel Guide" data-hi="यात्रा गाइड">Travel Guide</a>
+    <a href="#gallery" data-en="Gallery" data-hi="फोटो गैलरी">Gallery</a>
+    <button id="language">हिन्दी</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow" data-en="HIMACHAL PRADESH · INDIA" data-hi="हिमाचल प्रदेश · भारत">HIMACHAL PRADESH · INDIA</div>
+    <h1 data-en="Where the mountains<br><em>hold ancient stories.</em>" data-hi="जहाँ पहाड़ों में<br><em>बसती हैं पुरानी कथाएँ।</em>">Where the mountains<br><em>hold ancient stories.</em></h1>
+    <p data-en="Discover the sacred heights of Shikari Mata and the quiet beauty of Seraj Valley." data-hi="शिकारी माता के पवित्र धाम और सिराज घाटी की शांत प्राकृतिक सुंदरता को जानें।">Discover the sacred heights of Shikari Mata and the quiet beauty of Seraj Valley.</p>
+    <a class="btn" href="#explore" data-en="EXPLORE SERAJ ↗" data-hi="सिराज का अन्वेषण करें ↗">EXPLORE SERAJ ↗</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="kicker" data-en="01 — THE HIMALAYAN EXPERIENCE" data-hi="01 — हिमालय का अनुभव">01 — THE HIMALAYAN EXPERIENCE</div>
+  <div class="intro-grid">
+    <h2 data-en="A valley of <em>living heritage</em> and natural beauty." data-hi="जीवंत <em>विरासत</em> और प्राकृतिक सुंदरता से भरी घाटी।">A valley of <em>living heritage</em> and natural beauty.</h2>
+    <p data-en="Seraj is a landscape of forested slopes, village life, mountain trails and deeply rooted traditions. Explore its sacred places, discover local culture and enjoy the quiet side of Himachal Pradesh." data-hi="सिराज जंगलों से ढकी पहाड़ियों, गाँवों, पहाड़ी रास्तों और गहरी स्थानीय परंपराओं की धरती है। यहाँ के पवित्र स्थलों, संस्कृति और हिमाचल की शांत सुंदरता को जानें।">Seraj is a landscape of forested slopes, village life, mountain trails and deeply rooted traditions. Explore its sacred places, discover local culture and enjoy the quiet side of Himachal Pradesh.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong>3,359 m*</strong><span data-en="Reported altitude of Shikari Devi peak" data-hi="शिकारी देवी शिखर की बताई गई ऊँचाई">Reported altitude of Shikari Devi peak</span></div>
+    <div class="stat"><strong>Janjehli</strong><span data-en="A gateway to mountain exploration" data-hi="पहाड़ी भ्रमण का प्रमुख आधार">A gateway to mountain exploration</span></div>
+    <div class="stat"><strong>Nature · Faith</strong><span data-en="Culture and Himalayan landscapes" data-hi="संस्कृति और हिमालयी नज़ारे">Culture and Himalayan landscapes</span></div>
+  </div>
+  <p class="note" data-en="*Altitude reported by the Mandi district tourism website. Conditions and access may change." data-hi="*ऊँचाई मंडी जिला पर्यटन वेबसाइट के अनुसार है। परिस्थितियाँ और पहुँच मार्ग बदल सकते हैं।">*Altitude reported by the Mandi district tourism website. Conditions and access may change.</p>
+</section>
+
+<section class="temple" id="temple">
+  <div class="temple-photo" role="img" aria-label="Himalayan mountain landscape"></div>
+  <div class="temple-content">
+    <div class="kicker" data-en="02 — FAITH & FOLKLORE" data-hi="02 — आस्था और लोककथाएँ">02 — FAITH & FOLKLORE</div>
+    <h2 data-en="Shikari Mata<br><em>Temple</em>" data-hi="शिकारी माता<br><em>मंदिर</em>">Shikari Mata<br><em>Temple</em></h2>
+    <p data-en="Located high in the mountains of Mandi district, Shikari Devi Temple is known for its roofless shrine, mountain views and important place in local faith." data-hi="मंडी जिले के ऊँचे पहाड़ों में स्थित शिकारी देवी मंदिर अपने छत-विहीन मंदिर, पर्वतीय नज़ारों और स्थानीय आस्था में विशेष स्थान के लिए प्रसिद्ध है।">Located high in the mountains of Mandi district, Shikari Devi Temple is known for its roofless shrine, mountain views and important place in local faith.</p>
+    <h3 data-en="History & local traditions" data-hi="इतिहास और स्थानीय परंपराएँ">History & local traditions</h3>
+    <p data-en="Government tourism descriptions identify this as an ancient place of worship. Local traditions connect the shrine with the Pandavas and sage Markandeya, who is believed to have meditated here. These accounts are religious traditions, not independently verified historical dates." data-hi="सरकारी पर्यटन विवरण इस मंदिर को प्राचीन पूजा-स्थल बताते हैं। स्थानीय मान्यताएँ इस स्थल को पांडवों और ऋषि मार्कंडेय से जोड़ती हैं, जिनके बारे में कहा जाता है कि उन्होंने यहाँ तपस्या की थी। ये धार्मिक परंपराएँ हैं, स्वतंत्र रूप से प्रमाणित ऐतिहासिक तिथियाँ नहीं।">Government tourism descriptions identify this as an ancient place of worship. Local traditions connect the shrine with the Pandavas and sage Markandeya, who is believed to have meditated here. These accounts are religious traditions, not independently verified historical dates.</p>
+    <p data-en="The roofless shrine is one of the temple's most distinctive features. Different local stories explain it; these should be understood as folklore rather than proven historical explanations." data-hi="छत-विहीन मंदिर इसकी सबसे विशिष्ट विशेषताओं में से एक है। इसके बारे में अलग-अलग स्थानीय कथाएँ प्रचलित हैं। इन्हें प्रमाणित इतिहास के बजाय लोकपरंपरा के रूप में समझें।">The roofless shrine is one of the temple's most distinctive features. Different local stories explain it; these should be understood as folklore rather than proven historical explanations.</p>
+    <a class="source" href="https://hpmandi.nic.in/tourist-place/janjehli-shikari-devi-temple/" target="_blank" rel="noopener" data-en="Read official Mandi District information ↗" data-hi="मंडी जिला की आधिकारिक जानकारी पढ़ें ↗">Read official Mandi District information ↗</a>
+  </div>
+</section>
+
+<section class="section" id="explore">
+  <div class="kicker" data-en="03 — EXPLORE THE VALLEY" data-hi="03 — घाटी का भ्रमण">03 — EXPLORE THE VALLEY</div>
+  <h2 data-en="Discover places worth <em>slowing down for.</em>" data-hi="ऐसी जगहें खोजें जहाँ <em>ठहरना अच्छा लगे।</em>">Discover places worth <em>slowing down for.</em></h2>
+  <div class="cards">
+    <article class="card">
+      <img src="https://himtimes.com/wp-content/uploads/2015/08/janjehli-the-beautiful-valley.jpg" alt="Green Himalayan mountain landscape" loading="lazy">
+      <div class="card-content">
+        <h3>Janjehli</h3>
+        <p data-en="Explore green slopes, meadows, village life and mountain scenery. Janjehli is a useful base for discovering the surrounding region." data-hi="हरी पहाड़ियाँ, घास के मैदान, गाँवों का जीवन और पर्वतीय नज़ारे देखें। आसपास के क्षेत्र को जानने के लिए जंजैहली एक उपयोगी आधार है।">Explore green slopes, meadows, village life and mountain scenery. Janjehli is a useful base for discovering the surrounding region.</p>
+        <a href="https://himachaltourism.gov.in/destination/mandi/" target="_blank" rel="noopener" data-en="Official tourism information ↗" data-hi="आधिकारिक पर्यटन जानकारी ↗">Official tourism information ↗</a>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnuakfEQy_OkdOu4AtYuXsIZCQlultBr72S9O3j-9meA&s=10" alt="Mountain lake landscape" loading="lazy">
+      <div class="card-content">
+        <h3>Kamrunag</h3>
+        <p data-en="A revered mountain lake and temple associated with local belief and traditional pilgrimage. Check local access information before visiting." data-hi="स्थानीय आस्था और पारंपरिक तीर्थयात्रा से जुड़ी पूजनीय पहाड़ी झील और मंदिर। जाने से पहले स्थानीय पहुँच की जानकारी लें।">A revered mountain lake and temple associated with local belief and traditional pilgrimage. Check local access information before visiting.</p>
+        <a href="https://hpmandi.nic.in/tourist-places/" target="_blank" rel="noopener" data-en="District tourism website ↗" data-hi="जिला पर्यटन वेबसाइट ↗">District tourism website ↗</a>
+      </div>
+    </article>
+    <article class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStwjdKbr1O7MVvCQukzvztGpvBFDHS3NNzi13IdQNskA&s=10" alt="Forest trail through trees" loading="lazy">
+      <div class="card-content">
+        <h3 data-en="Forest trails" data-hi="जंगल की पगडंडियाँ">Forest trails</h3>
+        <p data-en="Enjoy forest scenery and mountain walks with local guidance. Respect wildlife, private land and forest regulations." data-hi="स्थानीय मार्गदर्शन के साथ जंगलों और पहाड़ी रास्तों का आनंद लें। वन्यजीवों, निजी भूमि और वन नियमों का सम्मान करें।">Enjoy forest scenery and mountain walks with local guidance. Respect wildlife, private land and forest regulations.</p>
+        <a href="#travel" data-en="Read travel tips ↗" data-hi="यात्रा सुझाव पढ़ें ↗">Read travel tips ↗</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="quote">
+  <blockquote data-en="“Travel gently. Listen to local stories. Leave the mountains as beautiful as you found them.”" data-hi="“धीरे यात्रा करें। स्थानीय कहानियाँ सुनें। पहाड़ों को वैसा ही सुंदर छोड़ें जैसा आपने उन्हें पाया।”">“Travel gently. Listen to local stories. Leave the mountains as beautiful as you found them.”</blockquote>
+</div>
+
+<section class="section" id="travel">
+  <div class="kicker" data-en="04 — PLAN YOUR VISIT" data-hi="04 — यात्रा की योजना">04 — PLAN YOUR VISIT</div>
+  <h2 data-en="A thoughtful <em>travel guide.</em>" data-hi="एक उपयोगी <em>यात्रा गाइड।</em>">A thoughtful <em>travel guide.</em></h2>
+  <div class="travel-grid">
+    <article class="travel-item">
+      <h3 data-en="Getting there" data-hi="कैसे पहुँचें">Getting there</h3>
+      <p data-en="Janjehli is accessible by road. Himachal Tourism lists it at around 85 km from Mandi; actual travel time varies. Confirm the route and road conditions locally." data-hi="जंजैहली सड़क मार्ग से पहुँचा जा सकता है। हिमाचल पर्यटन इसे मंडी से लगभग 85 किमी दूर बताता है; यात्रा का समय बदल सकता है। स्थानीय स्तर पर मार्ग और सड़क की स्थिति की पुष्टि करें।">Janjehli is accessible by road. Himachal Tourism lists it at around 85 km from Mandi; actual travel time varies. Confirm the route and road conditions locally.</p>
+    </article>
+    <article class="travel-item">
+      <h3 data-en="When to visit" data-hi="कब जाएँ">When to visit</h3>
+      <p data-en="Clear spring, summer and autumn days may be suitable for sightseeing. Rain, snow, landslides and seasonal closures can affect access. Check conditions before leaving." data-hi="वसंत, गर्मी और साफ़ शरद ऋतु के दिन घूमने के लिए अच्छे हो सकते हैं। बारिश, बर्फ, भूस्खलन और मौसमी बंदिशें पहुँच को प्रभावित कर सकती हैं। पहले जानकारी लें।">Clear spring, summer and autumn days may be suitable for sightseeing. Rain, snow, landslides and seasonal closures can affect access. Check conditions before leaving.</p>
+    </article>
+    <article class="travel-item">
+      <h3 data-en="What to carry" data-hi="क्या साथ रखें">What to carry</h3>
+      <p data-en="Carry warm layers, sturdy footwear, water, snacks, a charged phone, necessary medicines and a bag for waste. Mobile coverage may be limited." data-hi="गर्म कपड़े, मज़बूत जूते, पानी, हल्का भोजन, चार्ज फोन, ज़रूरी दवाइयाँ और कचरे के लिए थैला रखें। मोबाइल नेटवर्क सीमित हो सकता है।">Carry warm layers, sturdy footwear, water, snacks, a charged phone, necessary medicines and a bag for waste. Mobile coverage may be limited.</p>
+    </article>
+    <article class="travel-item">
+      <h3 data-en="Mountain safety" data-hi="पहाड़ी सुरक्षा">Mountain safety</h3>
+      <p data-en="Avoid travel during severe weather warnings. Do not trek alone. Check trail conditions, daylight, local guidance and applicable forest or sanctuary rules." data-hi="खराब मौसम की चेतावनी के दौरान यात्रा से बचें। अकेले ट्रेक न करें। रास्ते की स्थिति, दिन का उजाला, स्थानीय सलाह और वन संबंधी नियम जाँचें।">Avoid travel during severe weather warnings. Do not trek alone. Check trail conditions, daylight, local guidance and applicable forest or sanctuary rules.</p>
+    </article>
+  </div>
+  <div class="warning">
+    <strong data-en="Before you leave:" data-hi="निकलने से पहले:">Before you leave:</strong>
+    <p data-en="Check current weather alerts, road status and local administration updates. This website does not provide live road or emergency information." data-hi="मौसम चेतावनियाँ, सड़क की स्थिति और स्थानीय प्रशासन के अपडेट जाँचें। इस वेबसाइट पर लाइव सड़क या आपातकालीन जानकारी उपलब्ध नहीं है।">Check current weather alerts, road status and local administration updates. This website does not provide live road or emergency information.</p>
+    <a class="source" href="https://hpmandi.nic.in/" target="_blank" rel="noopener" data-en="Mandi District official website ↗" data-hi="मंडी जिला की आधिकारिक वेबसाइट ↗">Mandi District official website ↗</a>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="kicker" data-en="05 — PHOTO JOURNAL" data-hi="05 — तस्वीरों की दुनिया">05 — PHOTO JOURNAL</div>
+  <h2 data-en="A glimpse of <em>Seraj.</em>" data-hi="सिराज की <em>एक झलक।</em>">A glimpse of <em>Seraj.</em></h2>
+  <p data-en="Click a photo to view it larger. Replace these sample photographs with your own local images when possible." data-hi="तस्वीर को बड़ा देखने के लिए उस पर क्लिक करें। जहाँ संभव हो, इन नमूना तस्वीरों की जगह अपनी स्थानीय तस्वीरें लगाएँ।">Click a photo to view it larger. Replace these sample photographs with your own local images when possible.</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="file:///C:/Users/user/Desktop/Seraj%20velly%20Exploration/image/1769255708655.jpg" alt="Mountain landscape" loading="lazy"></div>
+    <div class="gallery-item"><img src="file:///C:/Users/user/Desktop/Seraj%20velly%20Exploration/image/1769255709220.jpg" alt="Snow-covered mountain" loading="lazy"></div>
+    <div class="gallery-item"><img src="file:///C:/Users/user/Desktop/Seraj%20velly%20Exploration/image/IMG_9905.JPG" alt="Forest landscape" loading="lazy"></div>
+    <div class="gallery-item"><img src="file:///C:/Users/user/Desktop/Seraj%20velly%20Exploration/image/IMG_0888%20copy.jpg" alt="Mountain lake" loading="lazy"></div>
+  </div>
+  <p class="note" data-en="Note: Sample stock photographs are illustrative and may not show the actual locations described. Check image licensing before republishing." data-hi="ध्यान दें: नमूना तस्वीरें केवल उदाहरण हैं और ज़रूरी नहीं कि बताए गए वास्तविक स्थानों की हों। दोबारा प्रकाशित करने से पहले तस्वीरों का लाइसेंस जाँचें।">Note: Sample stock photographs are illustrative and may not show the actual locations described. Check image licensing before republishing.</p>
+</section>
+
+<section class="cta">
+  <div>
+    <div class="kicker" data-en="YOUR JOURNEY STARTS HERE" data-hi="आपकी यात्रा यहाँ से शुरू होती है">YOUR JOURNEY STARTS HERE</div>
+    <h2 data-en="Explore with curiosity.<br><em>Leave with respect.</em>" data-hi="जिज्ञासा से घूमें।<br><em>सम्मान के साथ लौटें।</em>">Explore with curiosity.<br><em>Leave with respect.</em></h2>
+  </div>
+  <a class="btn" href="https://himachaltourism.gov.in/destination/mandi/" target="_blank" rel="noopener" data-en="OFFICIAL TOURISM ↗" data-hi="आधिकारिक पर्यटन ↗">OFFICIAL TOURISM ↗</a>
+</section>
+</main>
+
+<footer>
+  <div class="logo">SERAJ<small>VALLEY EXPLORER</small></div>
+  <p data-en="Celebrating the landscapes, heritage and people of Seraj, Himachal Pradesh." data-hi="हिमाचल प्रदेश के सिराज की प्रकृति, विरासत और लोगों को समर्पित।">Celebrating the landscapes, heritage and people of Seraj, Himachal Pradesh.</p>
+  <div class="footer-links">
+    <a href="https://hpmandi.nic.in/tourist-place/janjehli-shikari-devi-temple/" target="_blank" rel="noopener">Mandi District — Shikari Mata</a>
+    <a href="https://himachaltourism.gov.in/destination/mandi/" target="_blank" rel="noopener">Himachal Tourism</a>
+    <a href="#home" data-en="Back to top ↑" data-hi="ऊपर जाएँ ↑">Back to top ↑</a>
+  </div>
+  <p>© <span id="year"></span> Seraj Valley Explorer · <span data-en="Independent informational project" data-hi="स्वतंत्र जानकारीपरक परियोजना">Independent informational project By Manish Aarya</span></p>
+</footer>
+
+<div id="viewer" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="closeViewer" aria-label="Close">×</button>
+  <img id="largeImage" alt="Enlarged landscape photograph">
+</div>
+
+<script>
+const languageButton = document.getElementById('language');
+let currentLanguage = 'en';
+
+languageButton.addEventListener('click', function () {
+  currentLanguage = currentLanguage === 'en' ? 'hi' : 'en';
+  document.documentElement.lang = currentLanguage;
+
+  document.querySelectorAll('[data-en][data-hi]').forEach(function (element) {
+    element.innerHTML = element.dataset[currentLanguage];
+  });
+
+  languageButton.textContent = currentLanguage === 'en' ? 'हिन्दी' : 'English';
+});
+
+const menuButton = document.getElementById('menuBtn');
+const navigation = document.getElementById('nav');
+
+menuButton.addEventListener('click', function () {
+  navigation.classList.toggle('open');
+  menuButton.textContent = navigation.classList.contains('open') ? '×' : '☰';
+});
+
+navigation.querySelectorAll('a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    navigation.classList.remove('open');
+    menuButton.textContent = '☰';
+  });
+});
+
+const viewer = document.getElementById('viewer');
+const largeImage = document.getElementById('largeImage');
+
+document.querySelectorAll('.gallery-item img').forEach(function (img) {
+  img.addEventListener('click', function () {
+    largeImage.src = img.src;
+    largeImage.alt = img.alt;
+    viewer.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeViewer() {
+  viewer.style.display = 'none';
+  largeImage.src = '';
+  document.body.style.overflow = '';
+}
+
+document.getElementById('closeViewer').addEventListener('click', closeViewer);
+
+viewer.addEventListener('click', function (event) {
+  if (event.target === viewer) closeViewer();
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') closeViewer();
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
